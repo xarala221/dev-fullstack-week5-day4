@@ -1,0 +1,12 @@
+Bonjour les developpeurs de Xarala,
+Nous avons besoin d'une application qui permet de faire un suivi de livre.
+
+Nous devons avoir la possibilité d'ajouter, de modifier et de supprimer un livre.
+
+Pour chaque livre, nous devons stocker les informations suivants:
+
+- Le Titre du livre
+- Un petit resumé du livre
+- l'auteur du livre
+- La date d'ajout sur notre base de données
+- La date de la derniere modification

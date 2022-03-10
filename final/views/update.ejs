@@ -1,0 +1,27 @@
+<%- include('./partials/header'); %>
+
+<div class="container pt-2">
+  <div class="card">
+    <div class="card-body">
+      <form action="/books/<%= book.id %>/update" method="post">
+        <div class="mb-3">
+          <label for="title" class="form-label">Titre du livre</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="Titre du livre" required
+            value="<%= book.title %>">
+        </div>
+        <div class="mb-3">
+          <label for="author" class="form-label">Auteur</label>
+          <input type="text" class="form-control" id="author" name="author" placeholder="James" required
+            value="<%= book.author %>">
+        </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Résume</label>
+          <textarea class="form-control" id="resume" rows="3" name="resume" required><%= book.resume %></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Valider</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+<%- include('./partials/footer'); %>

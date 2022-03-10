@@ -1,0 +1,30 @@
+Hello guys, un client nous a contacté ppour un site.
+
+Nous devons lui créer un site qui permet de lister des livres.
+
+Les fonctionnalités de bases:
+
+- Ajouter un livre
+- Modifier un livre
+- Afficher la liste des livres
+- Supprimer un livre
+
+Stack Technologiques:
+
+- NodejS + Express
+- Bootstrap pour le frontend
+- Ejs comme moteur de template
+- Postgresql pour la base de données
+- Sequelize comme ORM
+- Github pour la gestion du code
+
+Pour le début, vous avez besoin d'une seule table mais vous devez garder en tete que l'application doit évoluer au fur et à mesure.
+
+Attributs de la table:
+
+- id
+- titre
+- auteur
+- resumé
+- date ajout
+- date modifier

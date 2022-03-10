@@ -1,0 +1,19 @@
+<%- include('./partials/header'); %>
+
+<div class="container text-center pt-2">
+  <div class="card">
+    <div class="card-body">
+
+      <h1><%= title %></h1>
+      <p>Ecrit par: <%= book.author %></p>
+
+      <p>
+        Résumé: <%= book.resume %>
+      </p>
+      <a href="/books/<%= book.id %>/update" class="card-link btn btn-primary">Modfier</a>
+      <a href="/books/<%= book.id %>/delete" class="card-link btn btn-danger">Supprimer</a>
+    </div>
+
+  </div>
+</div>
+<%- include('./partials/footer'); %>
