@@ -2,7 +2,7 @@
 
 ## Comment utiliser le projet
 
-Entrez au dossier `final` puis:
+Entrez au dossier `with-sql ou with-nosql` puis:
 
 `npm install`
 

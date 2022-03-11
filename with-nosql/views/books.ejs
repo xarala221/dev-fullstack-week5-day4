@@ -1,0 +1,62 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-md-9">
+      <h1><%= title %></h1>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal">
+        Ajouter un livre
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <% books.forEach(function(book){ %>
+
+    <div class="col-md-4">
+      <div class="list-group">
+        <a href="/books/<%= book.id %>/details" class="list-group-item list-group-item-action">
+          <%= book.title %> écrit par: <%= book.author %>
+        </a>
+      </div>
+    </div>
+
+    <% }); %>
+
+
+  </div>
+
+</div>
+
+<div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bookModalLabel">Nouveau livre</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/books" method="post">
+          <div class="mb-3">
+            <label for="title" class="form-label">Titre</label>
+            <input type="text" class="form-control" id="title" placeholder="Titre du livre" name="title" required>
+          </div>
+          <div class="mb-3">
+            <label for="title" class="form-label">Auteur</label>
+            <input type="text" class="form-control" id="author" placeholder="Auteur du livre" name="author" required>
+          </div>
+          <div class="mb-3">
+            <label for="resume" class="form-label">Résumé du livre</label>
+            <textarea class="form-control" id="resume" rows="3" name="resume" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Valider</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("./partials/footer.ejs") %>
